@@ -1,14 +1,12 @@
 import { useState, useEffect, createContext } from "react"
 import { useNavigate } from "react-router-dom"
 import clienteAxios from "../config/clienteAxios"
-import Alerta from "../components/Alerta"
 
 const AuthContext = createContext(0)
 
 const AuthProvider = ({children}) => {
 
     const [auth, setAuth] = useState({})
-    const [alerta, setAlerta] = useState({})
     const [cargando, setCargando] = useState(true)
 
     const navigate = useNavigate()
